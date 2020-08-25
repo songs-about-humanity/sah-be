@@ -6,18 +6,9 @@ const connect = require('../lib/utils/connect');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('sah-be routes', () => {
-  beforeAll(async() => {
-    const uri = await mongod.getUri();
-    return connect(uri);
-  });
+describe('sah-be tests', () => {
 
-  beforeEach(() => {
-    return mongoose.connection.dropDatabase();
-  });
-
-  afterAll(async() => {
-    await mongoose.connection.close();
-    return mongod.stop();
+  it('will pass the test', () => {
+    expect(true).toBeTruthy();
   });
 });
